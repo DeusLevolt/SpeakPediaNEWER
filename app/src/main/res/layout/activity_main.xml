@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradientbackground"
+    android:id="@+id/bg"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/display_text"
+        android:layout_width="352dp"
+        android:layout_height="61dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:textColor="@android:color/black"
+        android:fontFamily="sans-serif-light"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="29dp"
+        tools:layout_editor_absoluteY="145dp" />
+
+    <ImageButton
+        android:id="@+id/imageButtonq"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:background="@drawable/keyboard_13"
+        android:contentDescription="Q"
+        tools:layout_editor_absoluteX="36dp"
+        tools:layout_editor_absoluteY="349dp"
+        android:layout_marginTop="400dp"
+        android:layout_marginStart="5dp"
+        android:soundEffectsEnabled="true"/>
+
+    <ImageButton
+        android:id="@+id/imageButtonw"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:contentDescription="W"
+        tools:layout_editor_absoluteX="36dp"
+        tools:layout_editor_absoluteY="349dp"
+        android:background="@drawable/keyboard_14"
+        android:layout_marginTop="400dp"
+        android:layout_marginStart="37dp"
+        android:soundEffectsEnabled="true"/>
+
+    <ImageButton
+        android:id="@+id/imageButtone"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:background="@drawable/keyboard_15"
+        android:contentDescription="E"
+        tools:layout_editor_absoluteX="103dp"
+        tools:layout_editor_absoluteY="349dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="400dp"
+        android:soundEffectsEnabled="true"/>
+
+    <ImageButton
+        android:id="@+id/imageButtonr"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:contentDescription="R"
+        android:background="@drawable/keyboard_16"
+        tools:layout_editor_absoluteX="135dp"
+        tools:layout_editor_absoluteY="349dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="400dp"
+        android:soundEffectsEnabled="true"/>
+
+    <ImageButton
+        android:id="@+id/imageButtont"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:contentDescription="T"
+        android:background="@drawable/keyboard_17"
+        tools:layout_editor_absoluteX="167dp"
+        tools:layout_editor_absoluteY="349dp"
+        android:layout_marginTop="400dp"
+        android:layout_marginStart="133dp"
+        android:soundEffectsEnabled="true"/>
+
+    <ImageButton
+        android:id="@+id/imageButtony"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:background="@drawable/keyboard_18"
+        android:contentDescription="Y"
+        tools:layout_editor_absoluteX="199dp"
+        tools:layout_editor_absoluteY="349dp"
+        android:layout_marginStart="165dp"
+        android:layout_marginTop="400dp"
+        android:soundEffectsEnabled="true"/>
+
+    <ImageButton
+        android:id="@+id/imageButtonu"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:contentDescription="U"
+        android:background="@drawable/keyboard_19"
+        tools:layout_editor_absoluteX="231dp"
+        tools:layout_editor_absoluteY="349dp"
+        android:layout_marginTop="400dp"
+        android:layout_marginStart="197dp"
+        android:soundEffectsEnabled="true"/>
+
+    <ImageButton
+        android:id="@+id/imageButtoni"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:background="@drawable/keyboard_20"
+        android:contentDescription="I"
+        tools:layout_editor_absoluteX="263dp"
+        tools:layout_editor_absoluteY="349dp"
+        android:layout_marginStart="229dp"
+        android:layout_marginTop="400dp"
+        android:soundEffectsEnabled="true"/>
+
+    <ImageButton
+        android:id="@+id/imageButtono"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:contentDescription="O"
+        android:background="@drawable/keyboard_21"
+        tools:layout_editor_absoluteX="295dp"
+        tools:layout_editor_absoluteY="349dp"
+        android:layout_marginTop="400dp"
+        android:layout_marginStart="261dp"
+        android:soundEffectsEnabled="true"/>
+
+    <ImageButton
+        android:id="@+id/imageButtonp"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:contentDescription="P"
+        android:background="@drawable/keyboard_22"
+        tools:layout_editor_absoluteX="327dp"
+        tools:layout_editor_absoluteY="349dp"
+        android:layout_marginTop="400dp"
+        android:layout_marginStart="293dp"
+        android:soundEffectsEnabled="true"/>
+
+    <ImageButton
+        android:id="@+id/imageButtona"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:contentDescription="A"
+        android:background="@drawable/keyboard_23"
+        tools:layout_editor_absoluteX="327dp"
+        tools:layout_editor_absoluteY="349dp"
+        android:layout_marginTop="428dp"
+        android:layout_marginStart="9dp"
+        android:soundEffectsEnabled="true"/>
+
+    <ImageButton
+        android:id="@+id/imageButtons"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:contentDescription="S"
+        android:background="@drawable/keyboard_24"
+        tools:layout_editor_absoluteX="327dp"
+        tools:layout_editor_absoluteY="349dp"
+        android:layout_marginTop="428dp"
+        android:layout_marginStart="41dp"
+        android:soundEffectsEnabled="true"/>
+
+    <ImageButton
+        android:id="@+id/imageButtond"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:contentDescription="D"
+        android:background="@drawable/keyboard_25"
+        tools:layout_editor_absoluteX="327dp"
+        tools:layout_editor_absoluteY="349dp"
+        android:layout_marginTop="428dp"
+        android:layout_marginStart="74dp"
+        android:soundEffectsEnabled="true"/>
+
+    <ImageButton
+        android:id="@+id/imageButtonf"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:contentDescription="F"
+        android:background="@drawable/keyboard_26"
+        tools:layout_editor_absoluteX="327dp"
+        tools:layout_editor_absoluteY="349dp"
+        android:layout_marginTop="428dp"
+        android:layout_marginStart="107dp"
+        android:soundEffectsEnabled="true"/>
+
+    <ImageButton
+        android:id="@+id/imageButtong"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:contentDescription="G"
+        android:background="@drawable/keyboard_27"
+        tools:layout_editor_absoluteX="327dp"
+        tools:layout_editor_absoluteY="349dp"
+        android:layout_marginTop="428dp"
+        android:layout_marginStart="140dp"
+        android:soundEffectsEnabled="true"/>
+
+    <ImageButton
+        android:id="@+id/imageButtonh"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:contentDescription="H"
+        android:background="@drawable/keyboard_28"
+        tools:layout_editor_absoluteX="327dp"
+        tools:layout_editor_absoluteY="349dp"
+        android:layout_marginTop="428dp"
+        android:layout_marginStart="173dp"
+        android:soundEffectsEnabled="true"/>
+
+    <ImageButton
+        android:id="@+id/imageButtonj"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:contentDescription="J"
+        android:background="@drawable/keyboard_29"
+        tools:layout_editor_absoluteX="327dp"
+        tools:layout_editor_absoluteY="349dp"
+        android:layout_marginTop="428dp"
+        android:layout_marginStart="206dp"
+        android:soundEffectsEnabled="true"/>
+
+    <ImageButton
+        android:id="@+id/imageButtonk"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:contentDescription="K"
+        android:background="@drawable/keyboard_30"
+        tools:layout_editor_absoluteX="327dp"
+        tools:layout_editor_absoluteY="349dp"
+        android:layout_marginTop="428dp"
+        android:layout_marginStart="238dp"
+        android:soundEffectsEnabled="true"/>
+
+    <ImageButton
+        android:id="@+id/imageButtonl"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:contentDescription="L"
+        android:background="@drawable/keyboard_31"
+        tools:layout_editor_absoluteX="327dp"
+        tools:layout_editor_absoluteY="349dp"
+        android:layout_marginTop="428dp"
+        android:layout_marginStart="270dp"
+        android:soundEffectsEnabled="true"/>
+
+    <ImageButton
+        android:id="@+id/imageButtonz"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:contentDescription="Z"
+        android:background="@drawable/keyboard_32"
+        android:layout_marginTop="455dp"
+        android:layout_marginStart="25dp"
+        android:soundEffectsEnabled="true"/>
+
+    <ImageButton
+        android:id="@+id/imageButtonx"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:contentDescription="X"
+        android:background="@drawable/keyboard_33"
+        android:layout_marginTop="455dp"
+        android:layout_marginStart="57dp"
+        android:soundEffectsEnabled="true"/>
+
+    <ImageButton
+        android:id="@+id/imageButtonc"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:contentDescription="C"
+        android:background="@drawable/keyboard_34"
+        android:layout_marginTop="455dp"
+        android:layout_marginStart="90dp"
+        android:soundEffectsEnabled="true"/>
+
+    <ImageButton
+        android:id="@+id/imageButtonv"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:contentDescription="V"
+        android:background="@drawable/keyboard_35"
+        android:layout_marginTop="455dp"
+        android:layout_marginStart="122dp"
+        android:soundEffectsEnabled="true"/>
+
+    <ImageButton
+        android:id="@+id/imageButtonb"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:contentDescription="B"
+        android:background="@drawable/keyboard_36"
+        android:layout_marginTop="455dp"
+        android:layout_marginStart="154dp"
+        android:soundEffectsEnabled="true"/>
+
+    <ImageButton
+        android:id="@+id/imageButtonn"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:contentDescription="N"
+        android:background="@drawable/keyboard_37"
+        android:layout_marginTop="455dp"
+        android:layout_marginStart="187dp"
+        android:soundEffectsEnabled="true"/>
+
+    <ImageButton
+        android:id="@+id/imageButtonm"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:contentDescription="M"
+        android:background="@drawable/keyboard_38"
+        android:layout_marginTop="455dp"
+        android:layout_marginStart="220dp"
+        android:soundEffectsEnabled="true"/>
+
+    <ImageButton
+        android:id="@+id/imageButtondel"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:contentDescription="DEL"
+        android:background="@drawable/del"
+        android:layout_marginTop="428dp"
+        android:layout_marginStart="320dp"/>
+
+    <ImageButton
+        android:id="@+id/imageButtonspace"
+        android:layout_width="150dp"
+        android:layout_height="35dp"
+        android:contentDescription="space"
+        android:background="@drawable/keyboard_212"
+        android:layout_marginTop="481dp"
+        android:layout_marginStart="70dp"/>
+
+
+    <Button
+        android:id="@+id/imageButtonspeak"
+        android:layout_width="75dp"
+        android:layout_height="48dp"
+        android:layout_alignBottom="@id/display_text"
+        android:layout_marginBottom="-50dp"
+        android:layout_marginLeft="145dp"
+        android:backgroundTint="#FDE074"
+        android:padding="10dp"
+        android:text="Speak"
+        android:textAlignment="center"
+        android:textColor="@color/black" />
+
+    <ImageView
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="@drawable/appicon"/>
+
+    <ImageButton
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:background="@drawable/keyboard_212"
+        android:layout_marginTop="475dp"
+        android:layout_marginStart="280dp"/>
+    <ImageView
+        android:id="@+id/imageButtonsearch"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:background="@drawable/baseline_search_24"
+        android:layout_marginTop="475dp"
+        android:layout_marginStart="280dp"
+        android:clickable="true"/>
+
+    <ScrollView
+        android:background="@color/white"
+        android:layout_width="352dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="200dp"
+        android:layout_height="165dp">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="352dp"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textAlignment="center"
+                android:textSize="15sp" />
+        </LinearLayout>
+    </ScrollView>
+
+
+</RelativeLayout>
