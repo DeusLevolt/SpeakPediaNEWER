@@ -12,14 +12,28 @@ public class speakpediaSplashScreen extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_speakpedia_splash_screen);
+        setContentView(R.layout.welcome_screen);
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent intent = new Intent(speakpediaSplashScreen.this, MainActivity.class);
-                startActivity(intent);
-                finish();
+                setContentView(R.layout.welcome2);
+
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        setContentView(R.layout.activity_speakpedia_splash_screen);
+
+                        new Handler().postDelayed(new Runnable() {
+                            @Override
+                            public void run() {
+                                Intent intent = new Intent(speakpediaSplashScreen.this, MainActivity.class);
+                                startActivity(intent);
+                                finish();
+                            }
+                        }, 2000);
+                    }
+                }, 2000);
             }
-        },5000);
+        }, 2000);
     }
 }

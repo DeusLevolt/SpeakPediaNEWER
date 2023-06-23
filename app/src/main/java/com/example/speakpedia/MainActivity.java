@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -36,7 +37,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class MainActivity extends AppCompatActivity {
 
-    private TextView displayText;
+    private EditText displayText;
     TextToSpeech textToSpeech;
     public MainActivity() {
     }
@@ -82,6 +83,7 @@ public class MainActivity extends AppCompatActivity {
         Button imageButtonspeak = findViewById(R.id.imageButtonspeak);
         ImageButton imageButtonspace = findViewById(R.id.imageButtonspace);
         ImageView imageButtonsearch = findViewById(R.id.imageButtonsearch);
+        ImageButton imageButtonclearall = findViewById(R.id.imageButtonclearall);
 
 
         //set onclick listener for each buttons
@@ -285,6 +287,13 @@ public class MainActivity extends AppCompatActivity {
                 String currentText = displayText.getText().toString();
                 displayText.setText(currentText + " ");
             }
+        });
+
+        imageButtonclearall.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                    displayText.setText("");
+                }
         });
 
         textToSpeech = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {

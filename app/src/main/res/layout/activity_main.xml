@@ -9,7 +9,7 @@
     tools:context=".MainActivity">
 
 
-    <TextView
+    <EditText
         android:id="@+id/display_text"
         android:layout_width="352dp"
         android:layout_height="61dp"
@@ -33,7 +33,7 @@
         android:contentDescription="Q"
         tools:layout_editor_absoluteX="36dp"
         tools:layout_editor_absoluteY="349dp"
-        android:layout_marginTop="400dp"
+        android:layout_marginTop="520dp"
         android:layout_marginStart="5dp"
         android:soundEffectsEnabled="true"/>
 
@@ -45,7 +45,7 @@
         tools:layout_editor_absoluteX="36dp"
         tools:layout_editor_absoluteY="349dp"
         android:background="@drawable/keyboard_14"
-        android:layout_marginTop="400dp"
+        android:layout_marginTop="520dp"
         android:layout_marginStart="37dp"
         android:soundEffectsEnabled="true"/>
 
@@ -58,7 +58,7 @@
         tools:layout_editor_absoluteX="103dp"
         tools:layout_editor_absoluteY="349dp"
         android:layout_marginStart="68dp"
-        android:layout_marginTop="400dp"
+        android:layout_marginTop="520dp"
         android:soundEffectsEnabled="true"/>
 
     <ImageButton
@@ -70,7 +70,7 @@
         tools:layout_editor_absoluteX="135dp"
         tools:layout_editor_absoluteY="349dp"
         android:layout_marginStart="100dp"
-        android:layout_marginTop="400dp"
+        android:layout_marginTop="520dp"
         android:soundEffectsEnabled="true"/>
 
     <ImageButton
@@ -81,7 +81,7 @@
         android:background="@drawable/keyboard_17"
         tools:layout_editor_absoluteX="167dp"
         tools:layout_editor_absoluteY="349dp"
-        android:layout_marginTop="400dp"
+        android:layout_marginTop="520dp"
         android:layout_marginStart="133dp"
         android:soundEffectsEnabled="true"/>
 
@@ -94,7 +94,7 @@
         tools:layout_editor_absoluteX="199dp"
         tools:layout_editor_absoluteY="349dp"
         android:layout_marginStart="165dp"
-        android:layout_marginTop="400dp"
+        android:layout_marginTop="520dp"
         android:soundEffectsEnabled="true"/>
 
     <ImageButton
@@ -105,7 +105,7 @@
         android:background="@drawable/keyboard_19"
         tools:layout_editor_absoluteX="231dp"
         tools:layout_editor_absoluteY="349dp"
-        android:layout_marginTop="400dp"
+        android:layout_marginTop="520dp"
         android:layout_marginStart="197dp"
         android:soundEffectsEnabled="true"/>
 
@@ -118,7 +118,7 @@
         tools:layout_editor_absoluteX="263dp"
         tools:layout_editor_absoluteY="349dp"
         android:layout_marginStart="229dp"
-        android:layout_marginTop="400dp"
+        android:layout_marginTop="520dp"
         android:soundEffectsEnabled="true"/>
 
     <ImageButton
@@ -129,7 +129,7 @@
         android:background="@drawable/keyboard_21"
         tools:layout_editor_absoluteX="295dp"
         tools:layout_editor_absoluteY="349dp"
-        android:layout_marginTop="400dp"
+        android:layout_marginTop="520dp"
         android:layout_marginStart="261dp"
         android:soundEffectsEnabled="true"/>
 
@@ -141,7 +141,7 @@
         android:background="@drawable/keyboard_22"
         tools:layout_editor_absoluteX="327dp"
         tools:layout_editor_absoluteY="349dp"
-        android:layout_marginTop="400dp"
+        android:layout_marginTop="520dp"
         android:layout_marginStart="293dp"
         android:soundEffectsEnabled="true"/>
 
@@ -153,7 +153,7 @@
         android:background="@drawable/keyboard_23"
         tools:layout_editor_absoluteX="327dp"
         tools:layout_editor_absoluteY="349dp"
-        android:layout_marginTop="428dp"
+        android:layout_marginTop="548dp"
         android:layout_marginStart="9dp"
         android:soundEffectsEnabled="true"/>
 
@@ -165,7 +165,7 @@
         android:background="@drawable/keyboard_24"
         tools:layout_editor_absoluteX="327dp"
         tools:layout_editor_absoluteY="349dp"
-        android:layout_marginTop="428dp"
+        android:layout_marginTop="548dp"
         android:layout_marginStart="41dp"
         android:soundEffectsEnabled="true"/>
 
@@ -177,7 +177,7 @@
         android:background="@drawable/keyboard_25"
         tools:layout_editor_absoluteX="327dp"
         tools:layout_editor_absoluteY="349dp"
-        android:layout_marginTop="428dp"
+        android:layout_marginTop="548dp"
         android:layout_marginStart="74dp"
         android:soundEffectsEnabled="true"/>
 
@@ -189,7 +189,7 @@
         android:background="@drawable/keyboard_26"
         tools:layout_editor_absoluteX="327dp"
         tools:layout_editor_absoluteY="349dp"
-        android:layout_marginTop="428dp"
+        android:layout_marginTop="548dp"
         android:layout_marginStart="107dp"
         android:soundEffectsEnabled="true"/>
 
@@ -201,7 +201,7 @@
         android:background="@drawable/keyboard_27"
         tools:layout_editor_absoluteX="327dp"
         tools:layout_editor_absoluteY="349dp"
-        android:layout_marginTop="428dp"
+        android:layout_marginTop="548dp"
         android:layout_marginStart="140dp"
         android:soundEffectsEnabled="true"/>
 
@@ -213,7 +213,7 @@
         android:background="@drawable/keyboard_28"
         tools:layout_editor_absoluteX="327dp"
         tools:layout_editor_absoluteY="349dp"
-        android:layout_marginTop="428dp"
+        android:layout_marginTop="548dp"
         android:layout_marginStart="173dp"
         android:soundEffectsEnabled="true"/>
 
@@ -225,7 +225,7 @@
         android:background="@drawable/keyboard_29"
         tools:layout_editor_absoluteX="327dp"
         tools:layout_editor_absoluteY="349dp"
-        android:layout_marginTop="428dp"
+        android:layout_marginTop="548dp"
         android:layout_marginStart="206dp"
         android:soundEffectsEnabled="true"/>
 
@@ -237,7 +237,7 @@
         android:background="@drawable/keyboard_30"
         tools:layout_editor_absoluteX="327dp"
         tools:layout_editor_absoluteY="349dp"
-        android:layout_marginTop="428dp"
+        android:layout_marginTop="548dp"
         android:layout_marginStart="238dp"
         android:soundEffectsEnabled="true"/>
 
@@ -249,7 +249,7 @@
         android:background="@drawable/keyboard_31"
         tools:layout_editor_absoluteX="327dp"
         tools:layout_editor_absoluteY="349dp"
-        android:layout_marginTop="428dp"
+        android:layout_marginTop="548dp"
         android:layout_marginStart="270dp"
         android:soundEffectsEnabled="true"/>
 
@@ -259,7 +259,7 @@
         android:layout_height="35dp"
         android:contentDescription="Z"
         android:background="@drawable/keyboard_32"
-        android:layout_marginTop="455dp"
+        android:layout_marginTop="575dp"
         android:layout_marginStart="25dp"
         android:soundEffectsEnabled="true"/>
 
@@ -269,7 +269,7 @@
         android:layout_height="35dp"
         android:contentDescription="X"
         android:background="@drawable/keyboard_33"
-        android:layout_marginTop="455dp"
+        android:layout_marginTop="575dp"
         android:layout_marginStart="57dp"
         android:soundEffectsEnabled="true"/>
 
@@ -279,7 +279,7 @@
         android:layout_height="35dp"
         android:contentDescription="C"
         android:background="@drawable/keyboard_34"
-        android:layout_marginTop="455dp"
+        android:layout_marginTop="575dp"
         android:layout_marginStart="90dp"
         android:soundEffectsEnabled="true"/>
 
@@ -289,7 +289,7 @@
         android:layout_height="35dp"
         android:contentDescription="V"
         android:background="@drawable/keyboard_35"
-        android:layout_marginTop="455dp"
+        android:layout_marginTop="575dp"
         android:layout_marginStart="122dp"
         android:soundEffectsEnabled="true"/>
 
@@ -299,7 +299,7 @@
         android:layout_height="35dp"
         android:contentDescription="B"
         android:background="@drawable/keyboard_36"
-        android:layout_marginTop="455dp"
+        android:layout_marginTop="575dp"
         android:layout_marginStart="154dp"
         android:soundEffectsEnabled="true"/>
 
@@ -309,7 +309,7 @@
         android:layout_height="35dp"
         android:contentDescription="N"
         android:background="@drawable/keyboard_37"
-        android:layout_marginTop="455dp"
+        android:layout_marginTop="575dp"
         android:layout_marginStart="187dp"
         android:soundEffectsEnabled="true"/>
 
@@ -319,7 +319,7 @@
         android:layout_height="35dp"
         android:contentDescription="M"
         android:background="@drawable/keyboard_38"
-        android:layout_marginTop="455dp"
+        android:layout_marginTop="575dp"
         android:layout_marginStart="220dp"
         android:soundEffectsEnabled="true"/>
 
@@ -328,8 +328,8 @@
         android:layout_width="35dp"
         android:layout_height="35dp"
         android:contentDescription="DEL"
-        android:background="@drawable/del"
-        android:layout_marginTop="428dp"
+        android:background="@drawable/backspace"
+        android:layout_marginTop="548dp"
         android:layout_marginStart="320dp"/>
 
     <ImageButton
@@ -338,22 +338,20 @@
         android:layout_height="35dp"
         android:contentDescription="space"
         android:background="@drawable/keyboard_212"
-        android:layout_marginTop="481dp"
+        android:layout_marginTop="600dp"
         android:layout_marginStart="70dp"/>
 
 
     <Button
         android:id="@+id/imageButtonspeak"
-        android:layout_width="75dp"
-        android:layout_height="48dp"
-        android:layout_alignBottom="@id/display_text"
+        android:background="@drawable/speak_icon"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="96dp"
         android:layout_marginBottom="-50dp"
-        android:layout_marginLeft="145dp"
-        android:backgroundTint="#FDE074"
+        android:layout_marginLeft="270dp"
         android:padding="10dp"
-        android:text="Speak"
-        android:textAlignment="center"
-        android:textColor="@color/black" />
+        android:textAlignment="center"/>
 
     <ImageView
         android:layout_width="48dp"
@@ -364,18 +362,29 @@
         android:layout_width="35dp"
         android:layout_height="35dp"
         android:background="@drawable/keyboard_212"
-        android:layout_marginTop="475dp"
-        android:layout_marginStart="280dp"/>
+        android:layout_marginTop="330dp"
+        android:layout_marginStart="320dp"
+        android:translationZ="100dp"/>
     <ImageView
         android:id="@+id/imageButtonsearch"
         android:layout_width="35dp"
         android:layout_height="35dp"
         android:background="@drawable/baseline_search_24"
-        android:layout_marginTop="475dp"
-        android:layout_marginStart="280dp"
+        android:layout_marginTop="330dp"
+        android:layout_marginStart="320dp"
+        android:translationZ="100dp"
         android:clickable="true"/>
 
+    <ImageButton
+        android:id="@+id/imageButtonclearall"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:background="@drawable/del"
+        android:layout_marginTop="585dp"
+        android:layout_marginStart="320dp"/>
+
     <ScrollView
+        android:id="@+id/scrollView"
         android:background="@color/white"
         android:layout_width="352dp"
         android:layout_centerHorizontal="true"
