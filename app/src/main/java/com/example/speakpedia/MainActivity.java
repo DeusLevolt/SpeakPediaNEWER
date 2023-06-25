@@ -1,8 +1,11 @@
 package com.example.speakpedia;
 
-import androidx.appcompat.app.AppCompatActivity;
-
+import android.Manifest;
+import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
+import android.speech.RecognizerIntent;
+import android.speech.SpeechRecognizer;
 import android.speech.tts.TextToSpeech;
 import android.view.View;
 import android.widget.Button;
@@ -10,21 +13,16 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
-import com.google.gson.Gson;
-import com.google.gson.JsonArray;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonIOException;
-import com.google.gson.JsonObject;
-import com.google.gson.JsonPrimitive;
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import java.util.Arrays;
-import java.util.Locale;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Locale;
 
 import okhttp3.Interceptor;
 import okhttp3.OkHttpClient;
@@ -38,7 +36,11 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class MainActivity extends AppCompatActivity {
 
     private EditText displayText;
+    private SpeechRecognizer speechRecognizer;
     TextToSpeech textToSpeech;
+    private static final int REQUEST_PERMISSION_CODE = 1;
+    private static final int SPEECH_REQUEST_CODE = 2;
+
     public MainActivity() {
     }
 
@@ -84,6 +86,7 @@ public class MainActivity extends AppCompatActivity {
         ImageButton imageButtonspace = findViewById(R.id.imageButtonspace);
         ImageView imageButtonsearch = findViewById(R.id.imageButtonsearch);
         ImageButton imageButtonclearall = findViewById(R.id.imageButtonclearall);
+        ImageView imageButtonspeech = findViewById(R.id.imageButtonspeech);
 
 
         //set onclick listener for each buttons
@@ -292,8 +295,8 @@ public class MainActivity extends AppCompatActivity {
         imageButtonclearall.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                    displayText.setText("");
-                }
+                displayText.setText("");
+            }
         });
 
         textToSpeech = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
@@ -319,7 +322,73 @@ public class MainActivity extends AppCompatActivity {
                 searchWord(userInput);
             }
         });
+
+        imageButtonspeech.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                checkPermissionAndStartSpeechToText();
+            }
+        });
+        speechRecognizer = SpeechRecognizer.createSpeechRecognizer(this);
     }
+
+    private void checkPermissionAndStartSpeechToText() {
+        //check if the record audio permission is okay
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.RECORD_AUDIO) != PackageManager.PERMISSION_GRANTED) {
+            //request the permission
+            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.RECORD_AUDIO}, REQUEST_PERMISSION_CODE);
+        } else {
+            //is permission is already granted, start the stt
+            startSpeechToText();
+        }
+    }
+
+    private void startSpeechToText() {
+        Intent intent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
+        intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL, RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
+
+        //start the stt act and results
+        startActivityForResult(intent, SPEECH_REQUEST_CODE);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if (requestCode == SPEECH_REQUEST_CODE && resultCode == RESULT_OK) {
+            //retrieve the stt result
+            ArrayList<String> result = data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
+            if (result != null && !result.isEmpty()) {
+                //update the textview with the recognized text
+                displayText.setText(result.get(0));
+            }
+        }
+    }
+
+    public void onRequestPermissionResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+
+        if (requestCode == REQUEST_PERMISSION_CODE) {
+            if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                //permission granted, start stt
+                startSpeechToText();
+            } else {
+                //permission denied
+                Toast.makeText(this, "Permission is denied", Toast.LENGTH_SHORT).show();
+            }
+        }
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+
+        //release the speechRecodnizer resources
+        if (speechRecognizer != null) {
+            speechRecognizer.destroy();
+        }
+    }
+
 
     private TextView textView;
     private DictionaryService dictionaryService;
