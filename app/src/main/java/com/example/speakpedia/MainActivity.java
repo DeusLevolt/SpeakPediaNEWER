@@ -14,11 +14,15 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.view.Gravity;
+import android.view.MenuItem;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -32,6 +36,7 @@ import retrofit2.Callback;
 import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
+import com.google.android.material.navigation.NavigationView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -55,223 +60,15 @@ public class MainActivity extends AppCompatActivity {
         setupRetrofit();
 
         //reference to all buttons
-        ImageButton imageButtonq = findViewById(R.id.imageButtonq);
-        ImageButton imageButtonw = findViewById(R.id.imageButtonw);
-        ImageButton imageButtone = findViewById(R.id.imageButtone);
-        ImageButton imageButtonr = findViewById(R.id.imageButtonr);
-        ImageButton imageButtont = findViewById(R.id.imageButtont);
-        ImageButton imageButtony = findViewById(R.id.imageButtony);
-        ImageButton imageButtonu = findViewById(R.id.imageButtonu);
-        ImageButton imageButtoni = findViewById(R.id.imageButtoni);
-        ImageButton imageButtono = findViewById(R.id.imageButtono);
-        ImageButton imageButtonp = findViewById(R.id.imageButtonp);
-        ImageButton imageButtona = findViewById(R.id.imageButtona);
-        ImageButton imageButtons = findViewById(R.id.imageButtons);
-        ImageButton imageButtond = findViewById(R.id.imageButtond);
-        ImageButton imageButtonf = findViewById(R.id.imageButtonf);
-        ImageButton imageButtong = findViewById(R.id.imageButtong);
-        ImageButton imageButtonh = findViewById(R.id.imageButtonh);
-        ImageButton imageButtonj = findViewById(R.id.imageButtonj);
-        ImageButton imageButtonk = findViewById(R.id.imageButtonk);
-        ImageButton imageButtonl = findViewById(R.id.imageButtonl);
-        ImageButton imageButtonz = findViewById(R.id.imageButtonz);
-        ImageButton imageButtonx = findViewById(R.id.imageButtonx);
-        ImageButton imageButtonc = findViewById(R.id.imageButtonc);
-        ImageButton imageButtonv = findViewById(R.id.imageButtonv);
-        ImageButton imageButtonb = findViewById(R.id.imageButtonb);
-        ImageButton imageButtonn = findViewById(R.id.imageButtonn);
-        ImageButton imageButtonm = findViewById(R.id.imageButtonm);
         ImageButton imageButtondel = findViewById(R.id.imageButtondel);
         Button imageButtonspeak = findViewById(R.id.imageButtonspeak);
-        ImageButton imageButtonspace = findViewById(R.id.imageButtonspace);
         ImageView imageButtonsearch = findViewById(R.id.imageButtonsearch);
         ImageButton imageButtonclearall = findViewById(R.id.imageButtonclearall);
         ImageView imageButtonspeech = findViewById(R.id.imageButtonspeech);
 
 
         //set onclick listener for each buttons
-        imageButtonq.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String currentText = displayText.getText().toString();
-                displayText.setText(currentText + "Q");
-            }
-        });
-        imageButtonw.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String currentText = displayText.getText().toString();
-                displayText.setText(currentText + "W");
-            }
-        });
-        imageButtone.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String currentText = displayText.getText().toString();
-                displayText.setText(currentText + "E");
-            }
-        });
-        imageButtonr.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String currentText = displayText.getText().toString();
-                displayText.setText(currentText + "R");
-            }
-        });
-        imageButtont.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String currentText = displayText.getText().toString();
-                displayText.setText(currentText + "T");
-            }
-        });
-        imageButtony.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String currentText = displayText.getText().toString();
-                displayText.setText(currentText + "Y");
-            }
-        });
-        imageButtonu.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String currentText = displayText.getText().toString();
-                displayText.setText(currentText + "U");
-            }
-        });
-        imageButtoni.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String currentText = displayText.getText().toString();
-                displayText.setText(currentText + "I");
-            }
-        });
-        imageButtono.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String currentText = displayText.getText().toString();
-                displayText.setText(currentText + "O");
-            }
-        });
-        imageButtonp.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String currentText = displayText.getText().toString();
-                displayText.setText(currentText + "P");
-            }
-        });
-        imageButtona.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String currentText = displayText.getText().toString();
-                displayText.setText(currentText + "A");
-            }
-        });
-        imageButtons.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String currentText = displayText.getText().toString();
-                displayText.setText(currentText + "S");
-            }
-        });
-        imageButtond.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String currentText = displayText.getText().toString();
-                displayText.setText(currentText + "D");
-            }
-        });
-        imageButtonf.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String currentText = displayText.getText().toString();
-                displayText.setText(currentText + "F");
-            }
-        });
-        imageButtong.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String currentText = displayText.getText().toString();
-                displayText.setText(currentText + "G");
-            }
-        });
-        imageButtonh.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String currentText = displayText.getText().toString();
-                displayText.setText(currentText + "H");
-            }
-        });
-        imageButtonj.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String currentText = displayText.getText().toString();
-                displayText.setText(currentText + "J");
-            }
-        });
-        imageButtonk.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String currentText = displayText.getText().toString();
-                displayText.setText(currentText + "K");
-            }
-        });
-        imageButtonl.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String currentText = displayText.getText().toString();
-                displayText.setText(currentText + "L");
-            }
-        });
-        imageButtonz.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String currentText = displayText.getText().toString();
-                displayText.setText(currentText + "Z");
-            }
-        });
-        imageButtonx.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String currentText = displayText.getText().toString();
-                displayText.setText(currentText + "X");
-            }
-        });
-        imageButtonc.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String currentText = displayText.getText().toString();
-                displayText.setText(currentText + "C");
-            }
-        });
-        imageButtonv.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String currentText = displayText.getText().toString();
-                displayText.setText(currentText + "V");
-            }
-        });
-        imageButtonb.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String currentText = displayText.getText().toString();
-                displayText.setText(currentText + "B");
-            }
-        });
-        imageButtonn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String currentText = displayText.getText().toString();
-                displayText.setText(currentText + "N");
-            }
-        });
-        imageButtonm.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String currentText = displayText.getText().toString();
-                displayText.setText(currentText + "M");
-            }
-        });
+
         imageButtondel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -284,14 +81,6 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
-        imageButtonspace.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String currentText = displayText.getText().toString();
-                displayText.setText(currentText + " ");
-            }
-        });
-
         imageButtonclearall.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -313,15 +102,12 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String s = displayText.getText().toString();
                 int speech = textToSpeech.speak(s, TextToSpeech.QUEUE_FLUSH, null);
-            }
-        });
-        imageButtonsearch.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+
                 String userInput = displayText.getText().toString();
                 searchWord(userInput);
             }
         });
+
 
         imageButtonspeech.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -452,6 +238,63 @@ public class MainActivity extends AppCompatActivity {
             return "No definition found.";
         }
         return "Phonetics: " + responseBody.getHwi().getPhonetics()[0].getMw().toString() + "\n\nDefinition: " + responseBody.getShortDef()[0] + "\n\n";
+    }
+}
+class ActivityMain extends AppCompatActivity {
+    private DrawerLayout drawerLayout;
+    private ActionBarDrawerToggle drawerToggle;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        drawerLayout = findViewById(R.id.drawer_layout);
+        drawerToggle = new ActionBarDrawerToggle(
+                this,
+                drawerLayout,
+                R.string.navigation_drawer_open,
+                R.string.navigation_drawer_close
+        );
+
+        drawerLayout.addDrawerListener(drawerToggle);
+        drawerToggle.syncState();
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        NavigationView navigationView = findViewById(R.id.navigation_view);
+        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+                // Handle item clicks here.
+                // You can perform different actions based on the selected item.
+                switch (menuItem.getItemId()) {
+                    case R.id.nav_item_1:
+                        showToast("Item 1 Clicked");
+                        break;
+                    case R.id.nav_item_2:
+                        showToast("Item 2 Clicked");
+                        break;
+                    // Add more cases for other items if needed.
+                }
+
+                // Close the drawer after handling the item click.
+                drawerLayout.closeDrawer(Gravity.LEFT);
+                return true;
+            }
+        });
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        if (drawerToggle.onOptionsItemSelected(item)) {
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+    private void showToast(String message) {
+        Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
     }
 }
 
